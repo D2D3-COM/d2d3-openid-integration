@@ -1,7 +1,7 @@
 <?php
-namespace D2d3\OpenId;
+namespace D2d3\OpenidIntegration;
 
-use D2d3\OpenId\Http\Console\Commands\OpenIdSyncUser;
+use D2d3\OpenidIntegration\Http\Console\Commands\OpenIdSyncUser;
 use Illuminate\Support\ServiceProvider;
 
 class OpenIdServiceProvider extends ServiceProvider
