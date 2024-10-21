@@ -1,5 +1,5 @@
 {
-    "name": "d2d3/openid",
+    "name": "d2d3/openid-integration",
     "description": "Package supports OpenId integration",
     "autoload": {
         "psr-4": {
