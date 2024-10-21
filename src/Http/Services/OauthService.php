@@ -1,6 +1,6 @@
 <?php
 
-namespace D2d3\OpenId\Http\Services;
+namespace D2d3\OpenidIntegration\Http\Services;
 
 use Illuminate\Support\Facades\Http;
 
