@@ -1,8 +1,8 @@
 <?php
 
-namespace D2d3\OpenId\Http\Console\Commands;
+namespace D2d3\OpenidIntegration\Http\Console\Commands;
 
-use D2d3\OpenId\Http\Services\SyncDataService;
+use D2d3\OpenidIntegration\Http\Services\SyncDataService;
 use Illuminate\Console\Command;
 
 class OpenIdSyncUser extends Command
