@@ -1,0 +1,25 @@
+{
+    "name": "d2d3/openid",
+    "description": "Package supports OpenId integration",
+    "autoload": {
+        "psr-4": {
+            "D2d3\\OpenId\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "truongcv",
+            "email": "viettruong2495@gmail.com"
+        }
+    ],
+    "extra": {
+      "laravel": {
+        "providers": [
+          "D2d3\\OpenId\\OpenIdServiceProvider"
+        ]
+      }
+    },
+    "require": {
+      "php": "^7.4|^8.0"
+    }
+}
