@@ -29,7 +29,7 @@ to get user information
 
 <b>Step 1: Register app in OpenId </b>
 <br>
-<b>Redirect URI </b>
+<b>Redirect URI </b></b>
 This URL is used to get the <b>authorization_code</b> from OpenId. Normally, I would use the login URL to handle that too.
 ![image](https://github.com/user-attachments/assets/5bd06551-bd34-473b-8086-7c36c2ea63ac)
 <br>
@@ -66,5 +66,10 @@ This URL is used to get the <b>authorization_code</b> from OpenId. Normally, I w
 
 - Send AUTH_CODE to api LoginWithAuthCode and received user info to login
 ![image](https://github.com/user-attachments/assets/44b3f14c-f8fc-4ecb-b37d-c3a23bd1a179)
-
 <br>
+
+<h2>You can sync user from your app to OpenId with one command</h2>
+<pre>php artisan openid:sync-user</pre>
+This command will get <b>'email', 'first_name', 'last_name', 'phone', 'password'</b> of your app and sync to OpenId
+
+
