@@ -51,7 +51,9 @@ This URL is used to get the <b>authorization_code</b> from OpenId. Normally, I w
 ![image](https://github.com/user-attachments/assets/a53a260e-1562-4a71-9f2f-9f9c1258cfd2)
 
 - Determine if the user already exists by Email. If the user does not exist, create a new one. If it exists, update based on information received from OpenId.
-![image](https://github.com/user-attachments/assets/e940352c-b624-4e25-8463-35e798386a2d)
+  
+![image](https://github.com/user-attachments/assets/da4c5928-0d67-4cbe-8552-f6fdade5bcd1)
+
 
 - Finally, retrieve the user information needed to login and return it to the client.
 ![image](https://github.com/user-attachments/assets/e01acbd3-1a3b-479a-9265-4fb94878d144)
