@@ -10,7 +10,7 @@ class SyncDataService
 
   public static function syncUser()
   {
-      $users = User::select('email', 'first_name', 'last_name', 'phone', 'password')->get()->makeVisible('password');
+      $users = User::select('email', 'email_verified_at', 'first_name', 'last_name', 'phone', 'password')->get()->makeVisible('password');
 
       $response = Http::post(env('D2D3_OID_USER_SYNC_URL'), [
         'users' => $users,
