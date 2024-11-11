@@ -8,9 +8,14 @@ use Illuminate\Support\Facades\Http;
 class SyncDataService
 {
 
-  public static function syncUser()
+  public static function syncUser($user = null)
   {
-      $users = User::select('email', 'email_verified_at', 'first_name', 'last_name', 'phone', 'password')->get()->makeVisible('password');
+      if($user){
+          $users = [$user];
+      } else{
+          $users = User::select('email', 'email_verified_at', 'first_name', 'last_name', 'phone', 'password')->get()->makeVisible('password');
+
+      }
 
       $response = Http::post(env('D2D3_OID_USER_SYNC_URL'), [
         'users' => $users,
