@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Http;
 class SyncDataService
 {
 
-  public static function syncUser($user = null)
+  public static function syncUser($email = null)
   {
-      if($user){
-          $users = [$user];
+      if($email){
+          $users = User::select('email', 'email_verified_at', 'first_name', 'last_name', 'phone', 'password')->where(['email' => $email])->get()->makeVisible('password');
       } else{
           $users = User::select('email', 'email_verified_at', 'first_name', 'last_name', 'phone', 'password')->get()->makeVisible('password');
 
