@@ -72,6 +72,8 @@ This URL is used to get the <b>authorization_code</b> from OpenId. Normally, I w
 
 <h2>You can sync user from your app to OpenId with one command</h2>
 <pre>php artisan openid:sync-user</pre>
-This command will get <b>'email', 'first_name', 'last_name', 'phone', 'password'</b> of your app and sync to OpenId
+This command will get <b>'email', 'email_verified_at', 'first_name', 'last_name', 'phone', 'password'</b> of your app and sync to OpenId
 
+<h2>In case you want to sync user to OpenId when updating and creating new user, use </h2>
+<pre>SyncDataService::syncUser($email)</pre>
 
