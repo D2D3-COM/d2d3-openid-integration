@@ -10,6 +10,12 @@ class SyncDataService
 
   public static function syncUser($email = null)
   {
+      if (!env('D2D3_OID_USER_SYNC_URL') || !env('D2D3_OID_CLIENT_ID') || !env('D2D3_OID_CLIENT_SECRET') || !env('D2D3_OID_REDIRECT_URI')) {
+          return [
+              'status' => 400,
+              'message' => 'Required environment variables are missing.',
+          ];
+      }
       if($email){
           $users = User::select('email', 'email_verified_at', 'first_name', 'last_name', 'phone', 'password')->where(['email' => $email])->get()->makeVisible('password');
       } else{
